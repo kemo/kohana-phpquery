@@ -2,14 +2,13 @@
 
 function php_query_autoload($class)
 {
-	$pq_path = Kohana::find_file('vendor','phpQuery');
-	
 	if ($class === 'phpQuery')
 	{
-		require_once $pq_path;
+		require_once Kohana::find_file('vendor','phpQuery');;
 		
 		return TRUE;
 	}
+	
 	return FALSE;
 }
 
